@@ -149,7 +149,7 @@ h3 { font-size: 1.15rem; }
 
 .logo { display: flex; align-items: center; gap: 0.6rem; font-weight: 800; letter-spacing: -0.03em; }
 .logo-mark {
-  width: 38px; height: 38px; display: grid; place-items: center;
+  width: 40px; height: 50px; display: grid; place-items: center;
   border-radius: 12px; font-size: 0.95rem; color: #fff;
   background: linear-gradient(135deg, var(--brand), var(--brand-2));
   box-shadow: 0 8px 20px -8px var(--brand);
@@ -259,9 +259,51 @@ section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
   animation: float 6s ease-in-out infinite;
 }
 .chip-float span { width: 8px; height: 8px; border-radius: 3px; }
-.chip-float.c1 { top: 8%; right: -4%; }
+/* .chip-float.c1 { top: 8%; right: -4%; }
 .chip-float.c2 { bottom: 14%; left: -8%; animation-delay: 1.4s; }
 .chip-float.c3 { bottom: -2%; right: 6%; animation-delay: 2.6s; }
+.chip-float.c4 { bottom: -1%; right: 3%; animation-delay: 2.6s; } */
+/* Posisi setiap teknologi */
+.chip-float.c1 {
+    top: 8%;
+    right: -3%;
+}
+
+.chip-float.c2 {
+    top: 25%;
+    left: -7%;
+    animation-delay: 0.5s;
+}
+
+.chip-float.c3 {
+    top: 45%;
+    right: -8%;
+    animation-delay: 1s;
+}
+
+.chip-float.c4 {
+    bottom: 25%;
+    left: -9%;
+    animation-delay: 1.5s;
+}
+
+.chip-float.c5 {
+    bottom: 8%;
+    right: -3%;
+    animation-delay: 2s;
+}
+
+.chip-float.c6 {
+    top: 1%;
+    left: 2%;
+    animation-delay: 2.5s;
+}
+
+.chip-float.c7 {
+    bottom: 5%;
+    left: 15%;
+    animation-delay: 3s;
+}
 
 .scroll-hint { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 2.5rem; color: var(--text-muted); font-size: 0.85rem; }
 .scroll-hint .wheel { width: 22px; height: 34px; border: 2px solid var(--border); border-radius: 12px; position: relative; }
@@ -319,6 +361,20 @@ section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
   background: linear-gradient(135deg, var(--brand), var(--brand-2));
   font-size: 2rem; font-weight: 800; color: #fff;
   overflow: hidden;
+}
+.project-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#modalIcon img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: contain;
+    display: block;
+    border-radius: 12px;
 }
 .project-thumb span { opacity: 0.9; }
 .project-thumb .tag-float { position: absolute; top: 0.8rem; left: 0.8rem; }

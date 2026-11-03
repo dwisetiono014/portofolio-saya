@@ -1,5 +1,6 @@
+
 /* ==========================================
-   PORTFOLIO — data.js
+   PORTFOLIO ? data.js
    Semua konten (proyek, skill, sosial) ada di
    file ini. Ganti sesuai kebutuhanmu.
    ========================================== */
@@ -11,20 +12,19 @@ const PORTFOLIO = {
   role: "Frontend Developer,Backend Developer,Fullstack Developer,Web Developer",
   tagline: "Saya membangun antarmuka web yang cepat, aksesibel, dan enak dilihat.",
   email: "sansdwi007@gmail.com",
-  phone: "+62 857 1723 8143 / +62 857 7821 8875",
+  phone: "+62 857 7821 8875",
+  wa: "+62 857 7821 8875",
   location: "Jakarta, Indonesia",
   available: "Tersedia untuk proyek freelance & Paruh Penuh",
 
-  /* Ganti dengan username GitHub-mu */
   socials: [
     { name: "GitHub", url: "https://github.com/dwisetiono014", icon: "github" },
-    { name: "LinkedIn", url: "https://linkedin.com/in/username-kamu", icon: "linkedin" },
-    { name: "Instagram", url: "https://instagram.com/username.kamu", icon: "instagram" },
-    { name: "X", url: "https://x.com/usernamekamu", icon: "x" },
-    { name: "Email", url: "sansdwi007@gmail.com", icon: "mail" }
+    { name: "Facebook", url: "https://www.facebook.com/share/1E9uV92dKm/?mibextid=wwXIfr", icon: "facebook" },
+    { name: "Instagram", url: "https://www.instagram.com/dwsans007?vrfl=Z2VtbDEwMjIxbjZq&utm_source=qr", icon: "instagram" },
+    { name: "Tiktok", url: "www.tiktok.com/@dan.family1", icon: "tiktok" },
+    { name: "Email", url: "mailto:sansdwi007@gmail.com", icon: "mail" }
   ],
 
-  /* Teks animasi di hero */
   typing: [
     "Frontend Developer",
     "Backend Developer",
@@ -34,7 +34,6 @@ const PORTFOLIO = {
     "Open to Collaboration"
   ],
 
-  /* Angka statistik (dipakai juga sebagai counter) */
   stats: [
     { value: 4, suffix: "+", label: "Tahun Pengalaman" },
     { value: 12, suffix: "+", label: "Proyek Selesai" },
@@ -42,156 +41,146 @@ const PORTFOLIO = {
     { value: 98, suffix: "%", label: "Tingkat Kepuasan" }
   ],
 
-  /* Filter kategori proyek */
   categories: ["Semua", "Web App", "Landing Page", "E-Commerce"],
 
-  /* Daftar proyek. featured: true = tampil di home */
+  /* Daftar proyek */
   projects: [
     {
       id: 1,
-      title: "Nama Proyek Satu",
+      title: "Aplikasi Neraca Energi",
       category: "Web App",
-      year: 2025,
+      year: 2024,
       featured: true,
-      icon: "◆",
-      desc: "Deskripsi singkat satu kalimat tentang proyek ini.",
-      longDesc: "Jelaskan lebih detail: masalah yang diselesaikan, fitur utama, dan dampaknya bagi pengguna. Tulis 2 sampai 3 kalimat yang jelas.",
-      highlights: ["Fitur utama satu", "Fitur utama dua", "Fitur utama tiga"],
-      tags: ["HTML", "CSS", "JavaScript", "REST API"],
-      demo: "https://demo-kamu.netlify.app",
+      icon: "<img src='./assets/img/ne.png' alt='Neraca Energi'>",
+      desc: "Aplikasi Transaksi Tenaga Listrik PLN Jawa Madura Bali.",
+      longDesc: "Aplikasi ini adalah Aplikasi Transaksi Tenaga Listrik PLN Jawa Madura Bali serta seluruh Indonesia, di peruntukan tansaksi antara pihak PLN Se-Indonesia kepada Pembangkit di luar ataupun di dalam PLN.",
+      highlights: ["Summary Data", "Digital Sign", "Report BA 1"],
+      tags: ["PHP", "HTML", "CSS", "JavaScript", "REST API"],
+      demo: "https://neracaenergi.pln-jawa-bali.co.id/ds/",
       repo: "https://github.com/username-kamu/proyek-satu",
-      role: "Frontend Developer",
-      client: "Nama Klien",
-      duration: "3 bulan"
+      role: "Programmer/Frontend Developer",
+      client: "PT PLN Persero",
+      duration: "12 bulan"
     },
     {
       id: 2,
-      title: "Nama Proyek Dua",
-      category: "Landing Page",
-      year: 2025,
+      title: "Aplikasi AMR Management",
+      category: "Web App",
+      year: 2023,
       featured: true,
-      icon: "▲",
-      desc: "Deskripsi singkat satu kalimat tentang proyek ini.",
-      longDesc: "Jelaskan lebih detail: tujuan halaman, elemen interaktif yang dipakai, dan hasilnya dari sisi konversi.",
-      highlights: ["Desain responsif penuh", "Animasi saat scroll", "Struktur SEO friendly"],
-      tags: ["JavaScript", "GSAP", "Tailwind"],
-      demo: "https://demo-kamu.netlify.app",
+      icon: "<img src='./assets/img/amr.png' alt='AMR Management'>",
+      desc: "Aplikasi Metering PLN.",
+      longDesc: "Aplikasi Metering PLN ini adalah aplikasi untuk pengambilan data dari metering di olah dalam aplikasi yang nantinya akan di Singkronkan pada aplikasi Neraca Energi untuk dilakukan Transaksi Tenaga Listrik.",
+      highlights: ["Master Data Metering", "Get Manual Load Profile", "Reporting Data Load Profile"],
+      tags: ["PHP", "HTML", "CSS", "JavaScript", "JQuery", "REST API"],
+      demo: "https://amr.pln-jawa-bali.co.id/",
       repo: "https://github.com/username-kamu/proyek-dua",
-      role: "Frontend Developer",
-      client: "Startup Lokal",
-      duration: "1 bulan"
+      role: "Programmer/Frontend Developer/Backend Developer",
+      client: "PT PLN Persero",
+      duration: "12 bulan"
     },
     {
       id: 3,
-      title: "Nama Proyek Tiga",
-      category: "UI Component",
-      year: 2024,
+      title: "Aplikasi Rapsodi",
+      category: "Web App",
+      year: 2025,
       featured: true,
-      icon: "●",
-      desc: "Kumpulan komponen UI reusable lengkap dengan dokumentasi.",
-      longDesc: "Jelaskan lebih detail: jumlah komponen, pendekatan desain yang dipakai, dan bagaimana komponen ini dipakai ulang di banyak proyek.",
-      highlights: ["40+ komponen", "Mode dark dan light", "Navigasi keyboard"],
-      tags: ["CSS", "Web Components", "Storybook"],
-      demo: "https://demo-kamu.netlify.app",
+      icon: "<img src='./assets/img/rapsodi.png' alt='Rapsodi'>",
+      desc: "Aplikasi Pencatatan Start Stop Pembangkit.",
+      longDesc: "Aplikasi ini melakukan pencatatan Start Stop Pembangkit, yang akan di lakukan evaluasi terhadap kinerja pembangkitan.",
+      highlights: ["Graph LDC", "Reporting", "Planing"],
+      tags: ["PHP", "HTML", "CSS", "JavaScript", "JQuery", "REST API"],
+      demo: "https://hdks.pln-jawa-bali.co.id/",
       repo: "https://github.com/username-kamu/proyek-tiga",
-      role: "Frontend Developer",
-      client: "Proyek Internal",
-      duration: "2 bulan"
+      role: "Programmer/Frontend Developer/Backend Developer",
+      client: "PT PLN Persero Jawa Madura Bali (JAMALI)",
+      duration: "6 bulan"
     },
     {
       id: 4,
       title: "Webtrack",
       category: "E-Commerce",
-      year: 2024,
+      year: 2026,
       featured: false,
-      icon: "■",
+      icon: "<img src='./assets/img/webtrack.png' alt='Webtrack'>",
       desc: "Toko online dengan keranjang belanja dan alur checkout ringkas.",
-      longDesc: "Jelaskan lebih detail: alur belanja, integrasi pembayaran, dan pengoptimalan yang dilakukan agar halaman tetap cepat dimuat.",
-      highlights: ["Keranjang dan checkout", "Payment gateway", "Optimasi performa"],
-      tags: ["JavaScript", "PHP", "MySQL"],
-      demo: "https://demo-kamu.netlify.app",
+      longDesc: "Aplikasi E-Commerce sekaligus berlangganan tracking.",
+      highlights: ["Keranjang dan checkout", "Payment gateway", "Tracking Subsriber"],
+      tags: ["JavaScript", "PHP", "MySQL", "JQuery", "REST API"],
+      demo: "https://webtrack.id",
       repo: "https://github.com/username-kamu/proyek-empat",
-      role: "Frontend Developer",
-      client: "PT. Webcenter Sentra",
-      duration: "4 bulan"
+      role: "Programmer/Frontend Developer/Backend Developer",
+      client: "PT. Webcenter Sentra Solusindo",
+      duration: "6 bulan"
     },
     {
       id: 5,
-      title: "Nama Proyek Lima",
+      title: "Aplikasi PPA",
       category: "Web App",
-      year: 2023,
+      year: 2025,
       featured: false,
-      icon: "◈",
-      desc: "Dashboard analitik dengan visualisasi data yang interaktif.",
-      longDesc: "Jelaskan lebih detail: sumber data, jenis grafik yang dipakai, dan fitur filter interaktif yang disediakan untuk pengguna.",
-      highlights: ["Grafik interaktif", "Filter dinamis", "Export laporan"],
-      tags: ["JavaScript", "Chart.js", "REST API"],
-      demo: "https://demo-kamu.netlify.app",
+      icon: "<img src='./assets/img/ppa.png' alt='PPA'>",
+      desc: "Aplikasi Power Purchase Agreement (PPA).",
+      longDesc: "Aplikasi PPA ini adalah aplikasi pembayaran/tagihan dari pihak PLN ke pihak pembangkit atau distribusi.",
+      highlights: ["Master Rumus Perhitungan", "Report Tagihan", "BA 2", "JTF (Tagihan Final)"],
+      tags: ["PHP", "HTML", "CSS", "JavaScript", "JQuery", "Service"],
+      demo: "https://hdks.pln-jawa-bali.co.id/~ppa/",
       repo: "https://github.com/username-kamu/proyek-lima",
-      role: "Frontend Developer",
-      client: "Agensi",
-      duration: "2 bulan"
+      role: "Programmer/Frontend Developer/Backend Developer",
+      client: "PT PLN Persero Jawa Madura Bali (JAMALI)",
+      duration: "12 bulan"
     },
     {
       id: 6,
-      title: "Nama Proyek Enam",
+      title: "Aplikasi Netmoon",
       category: "Landing Page",
-      year: 2023,
+      year: 2026,
       featured: false,
-      icon: "★",
-      desc: "Landing page campaign dengan animasi dan uji A/B.",
-      longDesc: "Jelaskan lebih detail: tujuan campaign, strategi konten, dan hasil yang terukur lewat uji A/B pada dua versi halaman.",
-      highlights: ["Copywriting", "Uji A/B", "Konversi naik 38 persen"],
-      tags: ["HTML", "CSS", "Analytics"],
-      demo: "https://demo-kamu.netlify.app",
+      icon: "<img src='./assets/img/netmon.png' alt='NetMoon'>",
+      desc: "Aplikasi jaringan Office dan VPN.",
+      longDesc: "Aplikasi yang memantau Jaringan VPN dan internet kantor serta melakukan Loging.",
+      highlights: ["Copywriting", "Graph"],
+      tags: ["PHP", "JSON", "HTML", "CSS", "Analytics", "Javascript"],
+      demo: "https://netmon.webcenter.co.id/",
       repo: "https://github.com/username-kamu/proyek-enam",
-      role: "Frontend Developer",
-      client: "Brand Campaign",
+      role: "Programmer/Frontend Developer",
+      client: "PT Webcenter Sentra Solusindo",
       duration: "2 minggu"
     }
   ],
 
-  /* Skill utama (bar persen) */
   skills: [
-    { name: "HTML dan Semantic Markup", level: 95 },
-    { name: "CSS (Flexbox, Grid, Animasi)", level: 90 },
+    { name: "PHP", level: 90 },
+    { name: "HTML", level: 95 },
+    { name: "CSS (Flexbox, Grid, Animasi, Bootstrap)", level: 90 },
     { name: "JavaScript (ES6+)", level: 85 },
+    { name: "JQuery", level: 90 },
     { name: "Responsive Design", level: 92 },
-    { name: "React / Next.js", level: 75 },
+    { name: "MySQL SQL", level: 80 },
+    { name: "ORACLE SQL", level: 80 },
     { name: "Git dan CI/CD", level: 70 }
   ],
 
-  /* Tools yang dikuasai */
   tools: [
-    "VS Code", "Figma", "Git", "GitHub", "Chrome DevTools", "Postman",
-    "Netlify", "Vercel", "npm", "Tailwind CSS", "Vite", "Terminal"
+    "VS Code", "WinsCP", "Git", "GitHub", "Navicat", "Postman",
+    "Putty", "AI Agent", "Remote Dekstop", "Tailwind CSS", "Bootstrap", "Brup Suite"
   ],
 
-  /* Riwayat pada halaman About */
   timeline: [
     {
-      year: "2023 sampai Sekarang",
-      title: "Frontend Developer di Nama Perusahaan",
-      desc: "Jelaskan tanggung jawabmu di sini: fitur yang dibangun, ukuran tim, dan pencapaian utama yang paling terasa."
-    },
-    {
-      year: "2022 sampai 2023",
-      title: "Junior Web Developer di Nama Perusahaan",
-      desc: "Ceritakan aktivitasmu: halaman yang dikerjakan, proses belajar, dan hasil yang kamu dapatkan."
-    },
-    {
-      year: "2021 sampai 2022",
-      title: "Freelance Web Developer",
-      desc: "Jelaskan jenis klien yang dilayani dan kisaran proyek yang pernah dikerjakan."
-    },
-    {
-      year: "2020 sampai 2021",
-      title: "Belajar dan Berlatih Sendiri",
-      desc: "Sebutkan course, bootcamp, atau komunitas tempat kamu belajar dasar-dasar web development."
+      year: "2022 sampai Sekarang",
+      title: "Programmer/Web Developer di PT WebCenter Sentra Solusindo",
+      // desc: "Mengembangkan aplikasi berbasis web menggunakan PHP, HTML, CSS, JavaScript, dan database MySQL / ORACLE ,Melakukan analisis kebutuhan serta menerjemahkan requirement dari user menjadi fitur aplikasi. Melakukan perbaikan bug, troubleshooting, dan maintenance terhadap aplikasi yang sudah berjalan. Mengembangkan fitur baru serta melakukan penyesuaian pada sistem sesuai kebutuhan operasional perusahaan. Melakukan pengelolaan database, termasuk membuat dan mengoptimalkan query SQL. Melakukan pengujian aplikasi sebelum digunakan oleh user serta memastikan fitur berjalan sesuai kebutuhan. Memberikan dukungan teknis apabila terdapat kendala atau error pada aplikasi yang digunakan."
+      desc: "Mengembangkan aplikasi berbasis web menggunakan PHP, HTML, CSS, JavaScript, dan database MySQL / Oracle.\n" +
+      "Melakukan analisis kebutuhan serta menerjemahkan requirement dari user menjadi fitur aplikasi.\n" +
+      "Melakukan perbaikan bug, troubleshooting, dan maintenance terhadap aplikasi yang sudah berjalan.\n" +
+      "Mengembangkan fitur baru serta melakukan penyesuaian pada sistem sesuai kebutuhan operasional perusahaan.\n" +
+      "Melakukan pengelolaan database, termasuk membuat dan mengoptimalkan query SQL.\n" +
+      "Melakukan pengujian aplikasi sebelum digunakan oleh user serta memastikan fitur berjalan sesuai kebutuhan.\n" +
+      "Memberikan dukungan teknis apabila terdapat kendala atau error pada aplikasi yang digunakan."
     }
   ],
 
-  /* Sertifikasi */
   certifications: [
     { title: "Nama Sertifikasi 1", issuer: "Lembaga penerbit", year: 2025 },
     { title: "Nama Sertifikasi 2", issuer: "Lembaga penerbit", year: 2024 },

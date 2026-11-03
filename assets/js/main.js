@@ -18,6 +18,8 @@
     instagram: '<path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2Zm0 1.98c-3.14 0-3.5.01-4.74.07-.9.04-1.39.19-1.71.31-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.12.32-.27.81-.31 1.71-.06 1.24-.07 1.6-.07 4.74s.01 3.5.07 4.74c.04.9.19 1.39.31 1.71.17.43.37.74.69 1.06.32.32.63.52 1.06.69.32.12.81.27 1.71.31 1.24.06 1.6.07 4.74.07s3.5-.01 4.74-.07c.9-.04 1.39-.19 1.71-.31.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.12-.32.27-.81.31-1.71.06-1.24.07-1.6.07-4.74s-.01-3.5-.07-4.74c-.04-.9-.19-1.39-.31-1.71a2.85 2.85 0 0 0-.69-1.06 2.85 2.85 0 0 0-1.06-.69c-.32-.12-.81-.27-1.71-.31C15.5 4.19 15.14 4.18 12 4.18Zm0 3.2a4.62 4.62 0 1 1 0 9.24 4.62 4.62 0 0 1 0-9.24Zm0 1.98a2.64 2.64 0 1 0 0 5.28 2.64 2.64 0 0 0 0-5.28Zm5.2-3.2a1.08 1.08 0 1 1-2.16 0 1.08 1.08 0 0 1 2.16 0Z"/>',
     x: '<path d="M17.53 3h3.1l-6.77 7.74L21.7 21h-6.2l-4.86-6.35L5.1 21H2l7.24-8.28L2.5 3h6.36l4.39 5.8L17.53 3Zm-1.09 16.1h1.72L7.63 4.8H5.79l10.65 14.3Z"/>',
     mail: '<path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm9 7.2L4.5 6.5v.4L12 12.6l7.5-5.7v-.4L12 12.2Z"/>',
+    facebook: '<path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.413c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.973h-1.513c-1.491 0-1.956.93-1.956 1.885v2.263h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>',
+    tiktok: '<path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-2.9 2.844 2.9 2.9 0 1 1 2.9-2.9c0-.25-.02-.5-.06-.744v-3.52a6.35 6.35 0 1 0 3.505 5.682V8.56a8.18 8.18 0 0 0 4.78 1.527V6.65c-.34 0-.68-.035-1.01-.106z"/>',
     phone: '<path d="M6.6 3h3.1l1.6 4-2 1.4a12 12 0 0 0 5.3 5.3l1.4-2 4 1.6v3.1a2 2 0 0 1-2.2 2A17 17 0 0 1 4.6 5.2 2 2 0 0 1 6.6 3Z"/>',
     pin: '<path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7Zm0 4.5A2.5 2.5 0 1 0 12 11.5 2.5 2.5 0 0 0 12 6.5Z"/>',
     up: '<path d="m12 6 7 7-1.4 1.4L12 8.8 6.4 14.4 5 13l7-7Z"/>',
@@ -203,26 +205,74 @@
   /* ==========================================
      7. KARTU PROYEK + FILTER + MODAL
      ========================================== */
-  function projectCard(p, delay) {
+  // function projectCard(p, delay) {
+  //   return (
+  //     '<article class="card project reveal" data-category="' + escapeHtml(p.category) + '"' +
+  //     (delay != null ? ' data-delay="' + delay + '"' : "") +
+  //     ' data-id="' + p.id + '" tabindex="0" role="button" aria-label="Detail proyek ' + escapeHtml(p.title) + '">' +
+  //       '<div class="project-thumb">' +
+  //         '<span class="tag tag-float">' + escapeHtml(p.category) + '</span>' +
+  //         escapeHtml(p.icon || "◆") +
+  //       '</div>' +
+  //       '<div class="project-body">' +
+  //         '<div style="display:flex;align-items:center;gap:.6rem">' +
+  //           '<h3>' + escapeHtml(p.title) + '</h3>' +
+  //           '<span class="mono muted" style="font-size:.75rem">' + escapeHtml(p.year) + '</span>' +
+  //         '</div>' +
+  //         '<p>' + escapeHtml(p.desc) + '</p>' +
+  //         '<div class="tags">' + p.tags.map((t) => '<span class="tag">' + escapeHtml(t) + "</span>").join("") + '</div>' +
+  //       '</div>' +
+  //     "</article>"
+  //   );
+  // }
+//   function projectCardV2(p, delay) {
+//     return (
+//       '<article class="card project reveal" data-category="' + escapeHtml(p.category) + '"' +
+//       (delay != null ? ' data-delay="' + delay + '"' : "") +
+//       ' data-id="' + p.id + '" tabindex="0" role="button" aria-label="Detail proyek ' + escapeHtml(p.title) + '">' +
+//         '<div class="project-thumb">' +
+//           '<span class="tag tag-float">' + escapeHtml(p.category) + '</span>' +
+//           (p.icon || "?") +
+//         '</div>' +
+//         '<div class="project-body">' +
+//           '<div style="display:flex;align-items:center;gap:.6rem">' +
+//             '<h3>' + escapeHtml(p.title) + '</h3>' +
+//             '<span class="mono muted" style="font-size:.75rem">' + escapeHtml(p.year) + '</span>' +
+//           '</div>' +
+//           '<p>' + escapeHtml(p.desc) + '</p>' +
+//           '<div class="tags">' + p.tags.map((t) => '<span class="tag">' + escapeHtml(t) + "</span>").join("") + '</div>' +
+//         '</div>' +
+//       "</article>"
+//     );
+// }
+
+function projectCard(p, delay) {
     return (
       '<article class="card project reveal" data-category="' + escapeHtml(p.category) + '"' +
       (delay != null ? ' data-delay="' + delay + '"' : "") +
       ' data-id="' + p.id + '" tabindex="0" role="button" aria-label="Detail proyek ' + escapeHtml(p.title) + '">' +
+
         '<div class="project-thumb">' +
           '<span class="tag tag-float">' + escapeHtml(p.category) + '</span>' +
-          escapeHtml(p.icon || "◆") +
+          (p.icon || "?") +
         '</div>' +
+
         '<div class="project-body">' +
           '<div style="display:flex;align-items:center;gap:.6rem">' +
             '<h3>' + escapeHtml(p.title) + '</h3>' +
             '<span class="mono muted" style="font-size:.75rem">' + escapeHtml(p.year) + '</span>' +
           '</div>' +
+
           '<p>' + escapeHtml(p.desc) + '</p>' +
-          '<div class="tags">' + p.tags.map((t) => '<span class="tag">' + escapeHtml(t) + "</span>").join("") + '</div>' +
+
+          '<div class="tags">' +
+            p.tags.map((t) => '<span class="tag">' + escapeHtml(t) + '</span>').join("") +
+          '</div>' +
+
         '</div>' +
-      "</article>"
+      '</article>'
     );
-  }
+}
 
   function initProjects() {
     const grid = $("#projectGrid");
@@ -292,30 +342,92 @@
       }
     }
 
+    // function openModal(id) {
+    //   const p = D.projects.find((x) => x.id === id);
+    //   if (!p) return;
+    //   // $("#modalIcon").textContent = p.icon || "◆";
+    //   $("#modalIcon").innerHTML = p.icon || "◆";
+    //   $("#modalTitle").textContent = p.title;
+    //   $("#modalDesc").textContent = p.longDesc || p.desc;
+    //   $("#modalTags").innerHTML = p.tags.map((t) => '<span class="tag">' + escapeHtml(t) + "</span>").join("");
+    //   $("#modalHigh").innerHTML = (p.highlights || [])
+    //     .map((h) => "<li>" + escapeHtml(h) + "</li>")
+    //     .join("");
+    //   $("#modalFacts").innerHTML =
+    //     [["Kategori", p.category], ["Tahun", p.year], ["Peran", p.role], ["Klien", p.client], ["Durasi", p.duration]]
+    //       .filter((f) => f[1])
+    //       .map((f) => "<div><b>" + escapeHtml(f[0]) + "</b><br><span>" + escapeHtml(f[1]) + "</span></div>")
+    //       .join("");
+    //   const links = $("#modalLinks");
+    //   links.innerHTML =
+    //     (p.demo ? '<a class="btn btn-sm btn-primary" href="' + escapeHtml(p.demo) + '" target="_blank" rel="noopener">Live Demo</a>' : "") +
+    //     (p.repo ? '<a class="btn btn-sm" href="' + escapeHtml(p.repo) + '" target="_blank" rel="noopener">Kode Sumber</a>' : "");
+    //   modal.classList.add("open");
+    //   document.body.style.overflow = "hidden";
+    //   const close = modal.querySelector(".modal-close");
+    //   if (close) close.focus();
+    // }
     function openModal(id) {
       const p = D.projects.find((x) => x.id === id);
       if (!p) return;
-      $("#modalIcon").textContent = p.icon || "◆";
+
+      // Gambar project
+      $("#modalIcon").innerHTML = p.icon || "?";
+
+      // Judul dan deskripsi
       $("#modalTitle").textContent = p.title;
       $("#modalDesc").textContent = p.longDesc || p.desc;
-      $("#modalTags").innerHTML = p.tags.map((t) => '<span class="tag">' + escapeHtml(t) + "</span>").join("");
+
+      // Tags teknologi
+      $("#modalTags").innerHTML = p.tags.map((t) =>
+          '<span class="tag">' + escapeHtml(t) + '</span>'
+      ).join("");
+
+      // Highlights
       $("#modalHigh").innerHTML = (p.highlights || [])
-        .map((h) => "<li>" + escapeHtml(h) + "</li>")
-        .join("");
-      $("#modalFacts").innerHTML =
-        [["Kategori", p.category], ["Tahun", p.year], ["Peran", p.role], ["Klien", p.client], ["Durasi", p.duration]]
-          .filter((f) => f[1])
-          .map((f) => "<div><b>" + escapeHtml(f[0]) + "</b><br><span>" + escapeHtml(f[1]) + "</span></div>")
+          .map((h) => "<li>" + escapeHtml(h) + "</li>")
           .join("");
+
+      // Informasi project
+      $("#modalFacts").innerHTML =
+          [
+              ["Kategori", p.category],
+              ["Tahun", p.year],
+              ["Peran", p.role],
+              ["Klien", p.client],
+              ["Durasi", p.duration]
+          ]
+          .filter((f) => f[1])
+          .map((f) =>
+              "<div><b>" + escapeHtml(f[0]) +
+              "</b><br><span>" + escapeHtml(f[1]) + "</span></div>"
+          )
+          .join("");
+
+      // Tombol kunjungi situs dan repository
       const links = $("#modalLinks");
+
       links.innerHTML =
-        (p.demo ? '<a class="btn btn-sm btn-primary" href="' + escapeHtml(p.demo) + '" target="_blank" rel="noopener">Live Demo</a>' : "") +
-        (p.repo ? '<a class="btn btn-sm" href="' + escapeHtml(p.repo) + '" target="_blank" rel="noopener">Kode Sumber</a>' : "");
+          (p.demo ?
+              '<a class="btn btn-sm btn-primary" href="' +
+              escapeHtml(p.demo) +
+              '" target="_blank" rel="noopener noreferrer">Kunjungi Situs ?</a>'
+          : "");
+          //  +
+
+          // (p.repo ?
+          //     '<a class="btn btn-sm" href="' +
+          //     escapeHtml(p.repo) +
+          //     '" target="_blank" rel="noopener noreferrer">Kode Sumber</a>'
+          // : "");
+
+      // Tampilkan modal
       modal.classList.add("open");
       document.body.style.overflow = "hidden";
+
       const close = modal.querySelector(".modal-close");
       if (close) close.focus();
-    }
+  }
 
     function closeModal() {
       modal.classList.remove("open");
